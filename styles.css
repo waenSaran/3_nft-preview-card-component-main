@@ -1,9 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    font-family: 'Outfit', sans-serif;
+    color: hsl(215, 51%, 70%);
+    font-weight:300;
 }
 
 body {
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsl(217, 54%, 11%);
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: hsl(216, 50%, 16%);
+    height: 37.5rem;
+    width: 22rem;
+    border-radius: 10px;
+
+    box-shadow: 0 5rem 3rem 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-img {
+    position: relative;
+    margin: 1.5rem 1.5rem 0rem 1.5rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card-img img {
+    width:100%;
+    height:auto; 
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.card-body {
+    height: 40%;
+    margin: 1.5rem;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+.card-title:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+.price-tag{
+    color: hsl(178, 100%, 50%);
+    font-weight: 400;
+}
+
+.tag{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid hsl(215, 32%, 27%) ;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.creator-name {
+    margin-left: 1rem;
+}
+
+.creator-name span {
+    color: white;
+    cursor: pointer;
+}
+.creator-name span:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+.card-footer img {
+    width: 2.5rem;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* picture hover */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    color: #FFF;
+    background-color: hsl(178, 100%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay img {
+    width: 3rem;
+}
+
+.overlay:hover {
+    opacity: 1;
+    background-color: hsla(178, 100%, 50%, 0.5);
 }
